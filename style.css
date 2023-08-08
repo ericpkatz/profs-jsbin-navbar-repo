@@ -1,0 +1,46 @@
+body {
+  font-family: arial;
+}
+nav {
+  display: flex;
+}
+nav > a {
+  flex: 1;
+  text-decoration: none;
+  border: solid 0.5px grey;
+  text-align: center;
+  padding: 0.5rem;
+  color: #333333;
+  transition: all 1s;
+}
+
+nav > a.selected {
+  background-color: #EBF3FF;
+}
+
+nav > a:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+  transition: all 1s;
+}
+
+nav > a:first-child {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+nav > a:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (max-width: 300px){
+  nav {
+    flex-direction: column;
+  }
+  nav > a:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  nav > a:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
